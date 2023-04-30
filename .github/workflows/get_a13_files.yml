@@ -109,7 +109,7 @@ jobs:
           sudo cp -f "$GITHUB_WORKSPACE"/"$device"/system_ext/etc/build.prop "$GITHUB_WORKSPACE"/get_a13_files/system_ext
           sudo cp -f "$GITHUB_WORKSPACE"/"$device"/product/etc/build.prop "$GITHUB_WORKSPACE"/get_a13_files/product
           sudo cp -f "$GITHUB_WORKSPACE"/"$device"/odm/etc/build.prop "$GITHUB_WORKSPACE"/get_a13_files/odm
-          sudo cp -f "$GITHUB_WORKSPACE"/"$device"/system_ext/framework/framework-ext-res/ "$GITHUB_WORKSPACE"/get_a13_files/system_ext
+          sudo cp -f "$GITHUB_WORKSPACE"/"$device"/system_ext/framework/framework-ext-res/framework-ext-res.apk "$GITHUB_WORKSPACE"/get_a13_files/system_ext
           if [[ "$(7z l "$ORIGIN_ZIP_NAME" | grep mi_ext)" == "" ]]; then
               mkdir -p "$GITHUB_WORKSPACE"/get_a13_files/mi_ext
               mi_ext_build_prop=$(sudo find "$GITHUB_WORKSPACE"/"$device"/mi_ext -name "build.prop")
